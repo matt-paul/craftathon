@@ -6,17 +6,19 @@ $( document ).ready(function() {
 
     var dates = [0,0,0,0]
 
+    var month;
+
     for (var i=0; i<data.length; i++){
       (function (i){
         if (data[i].dispenseDate){
-          console.log (data[i].dispenseDate.substr(5,2))
-          if (data[i].dispenseDate.substr(5,2) === "09"){
+          month = data[i].dispenseDate.substr(5,2)
+          if (month === "09"){
             dates[0]+=1
-          } else if (data[i].dispenseDate.substr(5,2) === "10"){
+          } else if (month === "10"){
             dates[1]+=1
-          } else if (data[i].dispenseDate.substr(5,2) === "11"){
+          } else if (month === "11"){
             dates[2]+=1
-          } else if (data[i].dispenseDate.substr(5,2) === "12"){
+          } else if (month === "12"){
             dates[3]+=1;
           };
         };
