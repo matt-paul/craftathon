@@ -1,33 +1,18 @@
 $(document).ready(function() {
 
 
-// This will get the first returned node in the jQuery collection.
-var myNewChart = new Chart(ctx);
+var connectedLink = "http://serket.uk/badges/badgelist"
 
+$.getJSON(connectedLink, function showData(data){
 
-$.getJSON(connectedLink1, function showData(data){
-
-  var data0 = data.data[610]
-  var data1 = data.data[739]
-
-
-  console.log(data0)
-  console.log(data1)
-
-});
-
-var connectedLink2 = "http://serket.uk/badges/badgelist"
-
-$.getJSON(connectedLink2, function showData(data){
-
-  var data0 = data[610]
-  var data1 = data[739]
-
+  var dates = [0,0,0,0]
 
   for (var i=0; i<data.length; i++){
-    if (data[i].dispenseDate){
-      console.log(data[i].dispenseDate.substr(0,7))
-    };
+  (function {i}{
+    if (data[i].dispenseDate{
+      consol
+    })
+  })
   };
 
   var options = {
