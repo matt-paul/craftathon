@@ -5,11 +5,13 @@ $( document ).ready(function() {
   $.getJSON(connectedLink, function showData(data){
 
 
-// Third chart
+// Third chart - Month of September
 
     var dates = [0,0,0,0,0,0]
     var datesTrue = [0,0,0,0,0,0]
     var month;
+
+    // Pushing valid data for september into test month array
 
     var testMonth = []
 
@@ -22,13 +24,6 @@ $( document ).ready(function() {
       };
     };
 
-    console.log(dates)
-
-
-
-    for (var i=0; i<data.length; i++){
-      console.log(data[i].dispenseDate)
-    };
 
     daysTrue = [0,0,0,0,0,0,0]
 
@@ -37,7 +32,7 @@ $( document ).ready(function() {
     for (var i=0; i<testMonth.length; i++){
       if (testMonth[i].dispenseDate && data[i].statePattern){
         day= testMonth[i].dispenseDate.substr(8,2)
-        console.log(day)
+        // console.log(day)
         if (day === "12"){
           daysTrue[0]+=1
         } else if (day === "14"){
@@ -78,7 +73,7 @@ $( document ).ready(function() {
       };
     };
 
-    console.log(daysTrue)
+    // console.log(daysTrue)
 
 
     var data4 = {
@@ -86,7 +81,7 @@ $( document ).ready(function() {
       datasets: [
           {
               label: "My First dataset",
-              fillColor: "rgba(220,220,220,0.2)",
+              fillColor: "#1A9394",
               strokeColor: "rgba(220,220,220,1)",
               pointColor: "rgba(220,220,220,1)",
               pointStrokeColor: "#fff",
@@ -96,7 +91,7 @@ $( document ).ready(function() {
           },
                    {
               label: "My First dataset",
-              fillColor: "rgba(100,220,220,0.2)",
+              fillColor: "#42BDD2",
               strokeColor: "rgba(220,220,220,1)",
               pointColor: "rgba(220,220,220,1)",
               pointStrokeColor: "#fff",
@@ -109,9 +104,9 @@ $( document ).ready(function() {
     };
 
     var percentage2 = [];
-
     for (var i=0; i<days.length; i++){
       percentage2[i] = Math.round(daysTrue[i]*100/days[i])
+      console.log(percentage2)
     };
 
     var ctx = document.getElementById("myChart3").getContext("2d");

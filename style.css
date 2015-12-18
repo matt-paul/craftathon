@@ -1,0 +1,21 @@
+.chart {
+
+}
+
+canvas {
+  width: 50%;
+  height: 50%;
+}
+
+#dashboard {
+  width: 100%;
+  background-color: #F4F4F4;
+  float: left;
+}
+
+#leftSidebar {
+  max-width: 8%;
+  height: 600px;
+  background-color: #30404F;
+  float: left;
+}
