@@ -1,10 +1,14 @@
-h1, h2, h3, h4, p {
+h1, h2, h3, h4, p, a {
   font-family: 'Open Sans', Helvetica, Arial, sans-serif;
 }
 
 
 body {
   background-color: #F4F4F4;
+}
+
+a {
+  color: white;
 }
 
 
@@ -17,6 +21,22 @@ body {
   /*position: fixed;*/
 }
 
+.side-nav {
+  list-style-type: none;
+}
+
+.highlight-menu-item {
+  background-color: pink;
+}
+.welcome {
+  background-color: white;
+  width: 70%;
+  float: left;
+  border: solid 1px #E7EAEC;
+  margin: 1em;
+  padding: 0.9em;
+}
+
 
 .chart {
   background-color: white;
@@ -26,6 +46,7 @@ body {
   margin: 1em;
   padding: 0.9em;
 }
+
 
 
 canvas {

@@ -1,5 +1,17 @@
 var connectedLink2 = "http://serket.uk/badges/badgelist"
 
+
+$(function() {
+var $list;
+
+$list = $('ul');
+
+$('li').hover(function() {
+  $(this).toggleClass("highlight-menu-item")
+});
+
+});
+
 function unique(list) {
   var result = [];
   $.each(list, function(i, e) {
