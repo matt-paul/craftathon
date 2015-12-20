@@ -12,6 +12,8 @@ $( document ).ready(function() {
 
     var nums = [115, 108, 37, 37, 17, 16, 16, 11, 10, 7, 6, 3, 3, 3, 2, 2, 2, 2, 2, 2, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
 
+
+
     var data3 = {
       labels: names,
       datasets: [

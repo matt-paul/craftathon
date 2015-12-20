@@ -24,6 +24,12 @@ $( document ).ready(function() {
       };
     };
 
+    for (var i=0; i<data.length; i++){
+      if (data[i].statePattern && !data[i].medicineName){
+        console.log(data[i].pharmacyName);
+      }
+    }
+
 
     daysTrue = [0,0,0,0,0,0,0]
 
@@ -54,7 +60,7 @@ $( document ).ready(function() {
     for (var i=0; i<testMonth.length; i++){
       if (testMonth[i].dispenseDate){
         day= testMonth[i].dispenseDate.substr(8,2)
-        console.log(day)
+        // console.log(day)
         if (day === "12"){
           days[0]+=1
         } else if (day === "14"){
@@ -106,7 +112,7 @@ $( document ).ready(function() {
     var percentage2 = [];
     for (var i=0; i<days.length; i++){
       percentage2[i] = Math.round(daysTrue[i]*100/days[i])
-      console.log(percentage2)
+      // console.log(percentage2)
     };
 
     var ctx = document.getElementById("myChart3").getContext("2d");

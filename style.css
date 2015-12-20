@@ -1,21 +1,39 @@
-.chart {
-
+h1, h2, h3, h4, p {
+  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
 }
 
-canvas {
-  width: 50%;
-  height: 50%;
-}
 
-#dashboard {
-  width: 100%;
+body {
   background-color: #F4F4F4;
-  float: left;
 }
+
 
 #leftSidebar {
-  max-width: 8%;
+  width: 15%;
   height: 600px;
   background-color: #30404F;
   float: left;
+  color: #F4F4F4;
+  /*position: fixed;*/
+}
+
+
+.chart {
+  background-color: white;
+  width: 30%;
+  float: left;
+  border: solid 1px #E7EAEC;
+  margin: 1em;
+  padding: 0.9em;
+}
+
+
+canvas {
+  background-color: inherit;
+  width: auto;
+}
+
+
+.side-menu-active {
+  color: white;
 }
