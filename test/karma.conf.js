@@ -21,7 +21,7 @@ module.exports = function(config) {
       // 'bower_components/angular-mocks/angular-mocks.js',
       'js/jquery.js',
       'js/**/*.js',
-      // 'test/mockData.js',
+      'test/mockData.js',
       'test/**/*.spec.js',
 
       // { pattern: 'test/mockData.json',
