@@ -19,8 +19,16 @@ module.exports = function(config) {
       // 'bower_components/angular-route/angular-route.js',
       // 'bower_components/angular-resource/angular-resource.js',
       // 'bower_components/angular-mocks/angular-mocks.js',
+      'js/jquery.js',
       'js/**/*.js',
-      'test/**/*.spec.js'
+      // 'test/mockData.js',
+      'test/**/*.spec.js',
+
+      // { pattern: 'test/mockData.json',
+      //    watched: true,
+      //    served: true,
+      //    included: false }
+
     ],
 
 
