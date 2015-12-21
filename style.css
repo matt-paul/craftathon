@@ -44,14 +44,15 @@ a {
   float: left;
   border: solid 1px #E7EAEC;
   margin: 1em;
-  padding: 0.9em;
+  /*padding: 0.5em;*/
 }
 
 
 
 canvas {
   background-color: inherit;
-  width: auto;
+  /*width: 50%;*/
+  /*padding: 0.5em;*/
 }
 
 
