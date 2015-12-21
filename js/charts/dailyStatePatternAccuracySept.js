@@ -118,6 +118,8 @@ $( document ).ready(function() {
     var ctx = document.getElementById("myChart3").getContext("2d");
     var myLineChart = new Chart(ctx).Bar(data4, {
       showTooltips: false,
+      responsive: true,
+      maintainAspectRatio: true,
       onAnimationComplete: function () {
 
         var ctx = this.chart.ctx;

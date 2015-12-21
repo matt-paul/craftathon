@@ -31,7 +31,10 @@ $( document ).ready(function() {
     };
 
     var ctx = document.getElementById("myChart2").getContext("2d");
-    var myLineChart = new Chart(ctx).Bar(data3)
+    var myLineChart = new Chart(ctx).Bar(data3, {
+      responsive: true,
+      maintainAspectRatio: true
+    });
 
   });
 

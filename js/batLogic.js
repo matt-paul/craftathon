@@ -1,33 +1,32 @@
-var connectedLink2 = "http://serket.uk/badges/badgelist"
-
+// Hover over Nav Bar
 
 $(function() {
-var $list;
-
-$list = $('ul');
-
-$('li').hover(function() {
-  $(this).toggleClass("highlight-menu-item")
+  var $navList;
+  $navList = $('ul');
+    $('li').hover(function() {
+      $(this).toggleClass("highlight-menu-item")
+    });
 });
 
-});
+// Helper method to throw out duplicated items
 
 function unique(list) {
   var result = [];
-  $.each(list, function(i, e) {
-    if ($.inArray(e, result) == -1) result.push(e);
+  $.each(list, function(index, value) {
+    if ($.inArray(value, result) == -1) result.push(value);
   });
   return result;
 }
 
-$.getJSON(connectedLink2, function showData(data){
+//Get data from API
 
-  console.log("Length of data: ", data.length);
+var connectedLink2 = "http://serket.uk/badges/badgelist"
+
+$.getJSON(connectedLink2, function showData(data){
 
   // throw out everything without a date
 
   var dataWithDate = data.filter(datum => datum.dispenseDate);
-  console.log("Length of WithDate data: ", dataWithDate.length);
 
   data = dataWithDate;
 
@@ -43,6 +42,17 @@ $.getJSON(connectedLink2, function showData(data){
 
   var dataHappyName = data.filter(datum => happyMedName(datum.medicineName));
   console.log("Length of HappyName data: ", dataHappyName.length);
+
+//Messing around
+
+  function noMedName(name) {
+    var noNamePrescrips = [];
+    if (name) return false;
+    noNamePrescrips.push(id)
+  }
+
+  var dataNoMedName = data.filter(datum => noMedName(datum.medicineName));
+  console.log("Unhappy names", dataNoMedName.length);
 
   // extract the medicine names that make sense
 
@@ -71,11 +81,6 @@ $.getJSON(connectedLink2, function showData(data){
   var sortedNames = sortedBoth.map(pair => pair[0]);
   var sortedScores = sortedBoth.map(pair => pair[1]);
 
-  console.log(sortedNames);
-  console.log(sortedScores);
-
-  //
-
   var dispenseDateTimes = dataHappyName.map(datum => datum.dispenseDate).sort();
 
   var justTheDates = dispenseDateTimes.map(dateTime => dateTime.split('T')[0]);
@@ -83,9 +88,9 @@ $.getJSON(connectedLink2, function showData(data){
 
   var justTheHours = justTheTimes.map(time => time.slice(0,2));
 
-  console.log(dispenseDateTimes);
-  console.log(justTheDates);
-  console.log(justTheTimes);
-  console.log(unique(justTheHours));
+  // console.log(dispenseDateTimes);
+  // console.log(justTheDates);
+  // console.log(justTheTimes);
+  // console.log(unique(justTheHours));
 
 });
