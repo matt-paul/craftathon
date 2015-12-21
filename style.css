@@ -39,14 +39,17 @@ a {
 
 
 .chart {
+}
+
+.outer-chart {
   background-color: white;
   width: 30%;
   float: left;
   border: solid 1px #E7EAEC;
   margin: 1em;
-  /*padding: 0.5em;*/
-}
+  padding: 1em;
 
+}
 
 
 canvas {
